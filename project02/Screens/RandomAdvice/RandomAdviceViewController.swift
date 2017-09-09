@@ -21,6 +21,7 @@ class RandomAdviceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // load all available advices
         viewModel.loadAdvices()
     }
     
