@@ -28,10 +28,10 @@ class AdviceService {
             }
             // extract all advices into the array
             advices = json.map({ (advice:[String:String]) -> Advice? in
-                let id = UInt(advice["identifier"] ?? "")
+                let id = Int(advice["identifier"] ?? "")
                 let text = advice["text"]
                 let sound = advice["sound"]
-                let stat = UInt(advice["stat"] ?? "")
+                let stat = Int(advice["stat"] ?? "")
                 return Advice(id: id, text: text, sound: sound, stat: stat)
             }).filter({ (advice: Advice?) -> Bool in
                 return advice != nil ? true : false
