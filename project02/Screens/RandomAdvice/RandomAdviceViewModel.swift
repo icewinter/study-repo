@@ -16,7 +16,7 @@ class RandomAdviceViewModel {
     
     func loadAdvices() {
         advices = service.loadAdvices()
-    }
+    } 
     
     func getRandomAdvice() -> Advice {
         // get random index

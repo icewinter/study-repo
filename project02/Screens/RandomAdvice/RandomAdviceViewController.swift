@@ -17,7 +17,7 @@ class RandomAdviceViewController: UIViewController {
     @IBAction func onRandomAdviceButtonTapped(_ sender: Any) {
         // show random advice text on the label
         label.text = viewModel.getRandomAdvice().text
-    }
+    } 
     
     override func viewDidLoad() {
         super.viewDidLoad()

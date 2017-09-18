@@ -11,7 +11,7 @@ import UIKit
 class FavoriteAdvicesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    
+     
     var viewModel = FavoriteAdvicesViewModel()
     
     @IBAction func sortAdvicesButtonTapped(_ sender: Any) {

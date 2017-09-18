@@ -17,7 +17,7 @@ class NewAdviceViewController: UIViewController {
     @IBAction func onAddButtonTapped(_ sender: Any) {
         guard let adviceText = newAdviceTextField.text else {
             return
-        }
+        } 
         let advice: Advice = Advice(text: adviceText)
         viewModel.addNewAdvice(advice: advice)
         dismiss(animated: true, completion: nil)

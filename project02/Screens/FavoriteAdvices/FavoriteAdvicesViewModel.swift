@@ -12,7 +12,7 @@ enum SortOrder {
     case ASC
     case DESC
 }
-
+ 
 class FavoriteAdvicesViewModel {
     
     var advices: [Advice] = [Advice]()

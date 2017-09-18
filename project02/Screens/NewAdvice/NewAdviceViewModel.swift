@@ -15,5 +15,5 @@ class NewAdviceViewModel {
     func addNewAdvice(advice: Advice) {
         // add a new advice
         service.addNewAdvice(advice: advice)
-    }
+    } 
 }
