@@ -14,6 +14,7 @@
 		5583BA211F66FBA4005169E0 /* AdviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5583BA1F1F66FBA4005169E0 /* AdviceTableViewCell.xib */; };
 		55A371361F65A19D0008F2CC /* NewAdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A371351F65A19D0008F2CC /* NewAdviceViewController.swift */; };
 		55A371381F65A2630008F2CC /* NewAdviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A371371F65A2630008F2CC /* NewAdviceViewModel.swift */; };
+		55DF8C561F79690B002CAD4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DF8C551F79690B002CAD4E /* Assets.xcassets */; };
 		55FD99191F63F304004950DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD99181F63F304004950DD /* AppDelegate.swift */; };
 		55FD99351F63F5AE004950DD /* advices.json in Resources */ = {isa = PBXBuildFile; fileRef = 55FD99341F63F5AE004950DD /* advices.json */; };
 		55FD993C1F63F5D9004950DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FD99381F63F5D9004950DD /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 		5583BA1F1F66FBA4005169E0 /* AdviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AdviceTableViewCell.xib; path = Screens/FavoriteAdvices/Views/AdviceTableViewCell.xib; sourceTree = "<group>"; };
 		55A371351F65A19D0008F2CC /* NewAdviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewAdviceViewController.swift; path = Screens/NewAdvice/NewAdviceViewController.swift; sourceTree = "<group>"; };
 		55A371371F65A2630008F2CC /* NewAdviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewAdviceViewModel.swift; path = Screens/NewAdvice/NewAdviceViewModel.swift; sourceTree = "<group>"; };
+		55DF8C551F79690B002CAD4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AppResources/Assets.xcassets; sourceTree = "<group>"; };
 		55FD99151F63F304004950DD /* project02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FD99181F63F304004950DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55FD99341F63F5AE004950DD /* advices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = advices.json; path = "AppResources/Supporting files/json/advices.json"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		55FD992A1F63F3FF004950DD /* AppResources */ = {
 			isa = PBXGroup;
 			children = (
+				55DF8C551F79690B002CAD4E /* Assets.xcassets */,
 				55FD992C1F63F412004950DD /* Supporting files */,
 				55FD992B1F63F409004950DD /* Storyboards */,
 			);
@@ -245,6 +248,7 @@
 				55FD99351F63F5AE004950DD /* advices.json in Resources */,
 				55FD993D1F63F5D9004950DD /* Main.storyboard in Resources */,
 				5583BA211F66FBA4005169E0 /* AdviceTableViewCell.xib in Resources */,
+				55DF8C561F79690B002CAD4E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,15 +14,22 @@ class RandomAdviceViewController: UIViewController {
     
     var viewModel = RandomAdviceViewModel()
     
+    @IBAction func onNextAdviceButtonTapped(_ sender: Any) {
+        label.text = viewModel.getNextAdvice().text
+    }
+    
+    @IBAction func onPrevAdviceButtonTapped(_ sender: Any) {
+        label.text = viewModel.getPrevAdvice().text
+    }
+    
     @IBAction func onRandomAdviceButtonTapped(_ sender: Any) {
-        // show random advice text on the label
         label.text = viewModel.getRandomAdvice().text
-    } 
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // load all available advices
         viewModel.loadAdvices()
+        label.text = viewModel.getRandomAdvice().text
     }
     
 }

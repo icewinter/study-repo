@@ -12,16 +12,30 @@ class RandomAdviceViewModel {
     
     var advices: [Advice] = [Advice]()
     
+    private var adviceIndex: Int = 0
+    
     private var service: AdviceService =  AdviceService()
     
     func loadAdvices() {
         advices = service.loadAdvices()
     } 
     
+    func getNextAdvice() -> Advice {
+        let newValue = adviceIndex + 1
+        adviceIndex = (newValue >= 0 && newValue < advices.count) ? newValue : 0
+        return advices[adviceIndex]
+    }
+    
+    func getPrevAdvice() -> Advice {
+        let newValue = adviceIndex - 1
+        adviceIndex = (newValue >= 0 && newValue < advices.count) ? newValue : (advices.count + newValue)
+        return advices[adviceIndex]
+    }
+    
     func getRandomAdvice() -> Advice {
         // get random index
-        let adviceNumber = Int(arc4random_uniform(UInt32(self.advices.count)))
-        return advices[adviceNumber]
+        adviceIndex = Int(arc4random_uniform(UInt32(self.advices.count)))
+        return advices[adviceIndex]
     }
     
 }

@@ -71,18 +71,19 @@ class FavoriteAdvicesViewController: UIViewController, UITableViewDataSource, UI
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // set random height for a row
-        let rowHeights: [CGFloat] = [64.0, 104.0, 124.0]
-        let cellHeight = Int(arc4random_uniform(UInt32(rowHeights.count)))
-        return rowHeights[cellHeight]
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        // set random height for a row
+//        let rowHeights: [CGFloat] = [64.0, 104.0, 124.0]
+//        let cellHeight = Int(arc4random_uniform(UInt32(rowHeights.count)))
+//        return rowHeights[cellHeight]
+//    }
 
     // MARK: - Rest ones
     
     func setupTableView() {
         // register tableViewCells xib files
         tableView.register(UINib(nibName: AdviceTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: AdviceTableViewCell.cellReuseIdentifier)
+        tableView.estimatedRowHeight = 64.0
         // set tableView delegates
         tableView.dataSource = self
         tableView.delegate = self
