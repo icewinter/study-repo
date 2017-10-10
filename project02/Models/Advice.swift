@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class Advice: NSObject, NSCoding {
+class Advice: NSObject, NSCoding, Mappable {
     
-    var id: Int
-    var text: String
-    var sound: String
-    var stat: Int
+    var id: Int = 0
+    var text: String = ""
+    var sound: String = ""
+    var stat: Int = 0
     
     init?(id: Int?, text: String?, sound: String?, stat: Int?) {
         guard let _id = id else {
@@ -43,6 +44,18 @@ class Advice: NSObject, NSCoding {
         super.init()
     }
     
+    override init() {
+        self.id = 0
+        self.text = ""
+        self.sound = ""
+        self.stat = 0
+        super.init()
+    }
+    
+    convenience init(text: String) {
+        self.init()
+    }
+    
     required convenience init(coder aDecoder: NSCoder) {
         let id = aDecoder.decodeInteger(forKey: "id")
         let text = aDecoder.decodeObject(forKey: "text") as! String
@@ -51,14 +64,21 @@ class Advice: NSObject, NSCoding {
         self.init(id: id, text: text, sound: sound, stat: stat)
     }
     
-    convenience init(text: String) {
-        self.init(id: 0, text: text, sound: "", stat: 0)
-    }
-    
     func encode(with aCoder: NSCoder) {
         aCoder.encode(id, forKey: "id")
         aCoder.encode(text, forKey: "text")
         aCoder.encode(sound, forKey: "sound")
         aCoder.encode(stat, forKey: "stat")
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        text <- map["text"]
+        sound <- map["sound"]
+        stat <- map["stat"]
     }
 }

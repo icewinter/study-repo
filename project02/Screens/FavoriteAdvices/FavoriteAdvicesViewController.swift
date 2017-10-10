@@ -21,12 +21,10 @@ class FavoriteAdvicesViewController: UIViewController, UITableViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // setup the tableView
         setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // load advices from the userDefaults
         viewModel.loadAdvices()
         tableView.reloadData()
     }
@@ -70,13 +68,6 @@ class FavoriteAdvicesViewController: UIViewController, UITableViewDataSource, UI
             tableView.reloadData()
         }
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        // set random height for a row
-//        let rowHeights: [CGFloat] = [64.0, 104.0, 124.0]
-//        let cellHeight = Int(arc4random_uniform(UInt32(rowHeights.count)))
-//        return rowHeights[cellHeight]
-//    }
 
     // MARK: - Rest ones
     

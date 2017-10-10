@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CAF801E8C079441968421F5 /* Pods_project02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5DD7A1081EB01FA90BD5E8 /* Pods_project02.framework */; };
+		5559A77E1F8D51AE00768369 /* AdviceRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5559A77D1F8D51AE00768369 /* AdviceRealm.swift */; };
 		5583BA161F66ED0C005169E0 /* FavoriteAdvicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5583BA151F66ED0C005169E0 /* FavoriteAdvicesViewController.swift */; };
 		5583BA181F66ED34005169E0 /* FavoriteAdvicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5583BA171F66ED34005169E0 /* FavoriteAdvicesViewModel.swift */; };
 		5583BA1A1F66F787005169E0 /* AdviceServiceUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5583BA191F66F787005169E0 /* AdviceServiceUserDefaults.swift */; };
@@ -15,6 +17,7 @@
 		55A371361F65A19D0008F2CC /* NewAdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A371351F65A19D0008F2CC /* NewAdviceViewController.swift */; };
 		55A371381F65A2630008F2CC /* NewAdviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A371371F65A2630008F2CC /* NewAdviceViewModel.swift */; };
 		55DF8C561F79690B002CAD4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DF8C551F79690B002CAD4E /* Assets.xcassets */; };
+		55F555171F828994000222EA /* AdviceServiceRemoteServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F555161F828994000222EA /* AdviceServiceRemoteServer.swift */; };
 		55FD99191F63F304004950DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FD99181F63F304004950DD /* AppDelegate.swift */; };
 		55FD99351F63F5AE004950DD /* advices.json in Resources */ = {isa = PBXBuildFile; fileRef = 55FD99341F63F5AE004950DD /* advices.json */; };
 		55FD993C1F63F5D9004950DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FD99381F63F5D9004950DD /* LaunchScreen.storyboard */; };
@@ -26,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5559A77D1F8D51AE00768369 /* AdviceRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdviceRealm.swift; path = Models/AdviceRealm.swift; sourceTree = "<group>"; };
 		5583BA151F66ED0C005169E0 /* FavoriteAdvicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteAdvicesViewController.swift; path = Screens/FavoriteAdvices/FavoriteAdvicesViewController.swift; sourceTree = "<group>"; };
 		5583BA171F66ED34005169E0 /* FavoriteAdvicesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteAdvicesViewModel.swift; path = Screens/FavoriteAdvices/FavoriteAdvicesViewModel.swift; sourceTree = "<group>"; };
 		5583BA191F66F787005169E0 /* AdviceServiceUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdviceServiceUserDefaults.swift; path = Services/AdviceServiceUserDefaults.swift; sourceTree = "<group>"; };
@@ -34,6 +38,7 @@
 		55A371351F65A19D0008F2CC /* NewAdviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewAdviceViewController.swift; path = Screens/NewAdvice/NewAdviceViewController.swift; sourceTree = "<group>"; };
 		55A371371F65A2630008F2CC /* NewAdviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewAdviceViewModel.swift; path = Screens/NewAdvice/NewAdviceViewModel.swift; sourceTree = "<group>"; };
 		55DF8C551F79690B002CAD4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AppResources/Assets.xcassets; sourceTree = "<group>"; };
+		55F555161F828994000222EA /* AdviceServiceRemoteServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdviceServiceRemoteServer.swift; path = Services/AdviceServiceRemoteServer.swift; sourceTree = "<group>"; };
 		55FD99151F63F304004950DD /* project02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55FD99181F63F304004950DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55FD99341F63F5AE004950DD /* advices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = advices.json; path = "AppResources/Supporting files/json/advices.json"; sourceTree = "<group>"; };
@@ -44,6 +49,9 @@
 		55FD99401F63F629004950DD /* Advice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Advice.swift; path = Models/Advice.swift; sourceTree = "<group>"; };
 		55FD99441F63F696004950DD /* RandomAdviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomAdviceViewModel.swift; path = Screens/RandomAdvice/RandomAdviceViewModel.swift; sourceTree = "<group>"; };
 		55FD99461F63F6B5004950DD /* RandomAdviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomAdviceViewController.swift; path = Screens/RandomAdvice/RandomAdviceViewController.swift; sourceTree = "<group>"; };
+		98B4CD07D8CD5E45B807ECE8 /* Pods-project02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project02.release.xcconfig"; path = "Pods/Target Support Files/Pods-project02/Pods-project02.release.xcconfig"; sourceTree = "<group>"; };
+		B54F5060A506175076EAA798 /* Pods-project02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-project02.debug.xcconfig"; path = "Pods/Target Support Files/Pods-project02/Pods-project02.debug.xcconfig"; sourceTree = "<group>"; };
+		CB5DD7A1081EB01FA90BD5E8 /* Pods_project02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,12 +59,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAF801E8C079441968421F5 /* Pods_project02.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		077C96FB61EF17EC626D0AC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB5DD7A1081EB01FA90BD5E8 /* Pods_project02.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4570A551F57D23A6BF0AF7E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B54F5060A506175076EAA798 /* Pods-project02.debug.xcconfig */,
+				98B4CD07D8CD5E45B807ECE8 /* Pods-project02.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5583BA141F66EC50005169E0 /* FavoriteAdvices */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +116,8 @@
 			children = (
 				55FD99171F63F304004950DD /* project02 */,
 				55FD99161F63F304004950DD /* Products */,
+				4570A551F57D23A6BF0AF7E8 /* Pods */,
+				077C96FB61EF17EC626D0AC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				55FD99401F63F629004950DD /* Advice.swift */,
+				5559A77D1F8D51AE00768369 /* AdviceRealm.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -162,6 +191,7 @@
 			children = (
 				55FD993E1F63F611004950DD /* AdviceService.swift */,
 				5583BA191F66F787005169E0 /* AdviceServiceUserDefaults.swift */,
+				55F555161F828994000222EA /* AdviceServiceRemoteServer.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -192,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55FD99271F63F305004950DD /* Build configuration list for PBXNativeTarget "project02" */;
 			buildPhases = (
+				7F5275B61CD845DB55A4E394 /* [CP] Check Pods Manifest.lock */,
 				55FD99111F63F304004950DD /* Sources */,
 				55FD99121F63F304004950DD /* Frameworks */,
 				55FD99131F63F304004950DD /* Resources */,
+				836DECD0B64A1BAB7CB1DA7D /* [CP] Embed Pods Frameworks */,
+				32D69A0257666909848D5F59 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +287,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32D69A0257666909848D5F59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-project02/Pods-project02-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F5275B61CD845DB55A4E394 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		836DECD0B64A1BAB7CB1DA7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-project02/Pods-project02-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55FD99111F63F304004950DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,12 +344,14 @@
 				55FD99191F63F304004950DD /* AppDelegate.swift in Sources */,
 				5583BA201F66FBA4005169E0 /* AdviceTableViewCell.swift in Sources */,
 				55FD993F1F63F611004950DD /* AdviceService.swift in Sources */,
+				5559A77E1F8D51AE00768369 /* AdviceRealm.swift in Sources */,
 				55A371361F65A19D0008F2CC /* NewAdviceViewController.swift in Sources */,
 				5583BA161F66ED0C005169E0 /* FavoriteAdvicesViewController.swift in Sources */,
 				55FD99471F63F6B5004950DD /* RandomAdviceViewController.swift in Sources */,
 				5583BA1A1F66F787005169E0 /* AdviceServiceUserDefaults.swift in Sources */,
 				55A371381F65A2630008F2CC /* NewAdviceViewModel.swift in Sources */,
 				5583BA181F66ED34005169E0 /* FavoriteAdvicesViewModel.swift in Sources */,
+				55F555171F828994000222EA /* AdviceServiceRemoteServer.swift in Sources */,
 				55FD99411F63F629004950DD /* Advice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +475,7 @@
 		};
 		55FD99281F63F305004950DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B54F5060A506175076EAA798 /* Pods-project02.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/project02/AppResources/Supporting files/Info.plist";
@@ -405,6 +489,7 @@
 		};
 		55FD99291F63F305004950DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98B4CD07D8CD5E45B807ECE8 /* Pods-project02.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/project02/AppResources/Supporting files/Info.plist";
