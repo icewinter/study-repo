@@ -8,17 +8,18 @@
 
 import Foundation
 
-protocol AdviceModelViewProtocol : class {
+protocol RandomAdviceViewModelProtocol : class {
     func loadingStarted()
     func loadingFinished()
-    func loadingError(error:Error)
+    func error(error:Error)
 }
 
 class RandomAdviceViewModel : AdviceServiceRemoteServerProtocol {
     
+    weak var delegate: RandomAdviceViewModelProtocol?
+    private var advices: [Advice] = [Advice]()
     private var adviceIndex: Int = 0
     private var service = AdviceServiceRemoteServer()
-    weak var delegate: AdviceModelViewProtocol?
     
     // MARK: - the model view interface
     
@@ -28,7 +29,7 @@ class RandomAdviceViewModel : AdviceServiceRemoteServerProtocol {
     } 
     
     func getNextAdvice() -> Advice? {
-        guard let advices = service.advices else {
+        guard advices.isEmpty == false else {
             return nil
         }
         let newValue = adviceIndex + 1
@@ -37,7 +38,7 @@ class RandomAdviceViewModel : AdviceServiceRemoteServerProtocol {
     }
     
     func getPrevAdvice() -> Advice? {
-        guard let advices = service.advices else {
+        guard advices.isEmpty == false else {
             return nil
         }
         let newValue = adviceIndex - 1
@@ -46,10 +47,10 @@ class RandomAdviceViewModel : AdviceServiceRemoteServerProtocol {
     }
     
     func getRandomAdvice() -> Advice? {
-        guard let advices = service.advices else {
+        guard advices.isEmpty == false else {
             return nil
         }
-        adviceIndex = Int(arc4random_uniform(UInt32(advices.count)))  // get random index
+        adviceIndex = Int(arc4random_uniform(UInt32(advices.count)))
         return advices[adviceIndex]
     }
     
@@ -60,11 +61,17 @@ class RandomAdviceViewModel : AdviceServiceRemoteServerProtocol {
     }
     
     func loadingFinished() {
+        guard service.advices.isEmpty == false else {
+            delegate?.loadingFinished()
+            return
+        }
+        advices = [Advice]()
+        advices.append(contentsOf: service.advices)
         delegate?.loadingFinished()
     }
     
-    func loadingError(error: Error) {
-        delegate?.loadingError(error: error)
+    func error(error: Error) {
+        delegate?.error(error: error)
     }
     
 }

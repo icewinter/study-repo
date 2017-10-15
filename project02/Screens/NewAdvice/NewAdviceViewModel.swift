@@ -10,10 +10,9 @@ import Foundation
 
 class NewAdviceViewModel {
  
-    private var service = AdviceServiceUserDefaults()
+    private var service = AdviceServiceDataBase()
     
     func addNewAdvice(advice: Advice) {
-        // add a new advice
-        service.addNewAdvice(advice: advice)
+        service.addAdvice(advice: advice)
     } 
 }

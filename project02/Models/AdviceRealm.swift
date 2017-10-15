@@ -27,7 +27,7 @@ class AdviceRealm : Object, Mappable {
     }
     
     func mapping(map: Map) {
-        id    <- map["id"]
+        id <- map["id"]
         text <- map["text"]
         sound <- map["sound"]
         stat <- map["stat"]

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class FavoriteAdvicesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FavoriteAdvicesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FavoriteAdvicesViewModelProtocol {
 
     @IBOutlet weak var tableView: UITableView!
-     
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var viewModel = FavoriteAdvicesViewModel()
     
     @IBAction func sortAdvicesButtonTapped(_ sender: Any) {
@@ -21,15 +21,17 @@ class FavoriteAdvicesViewController: UIViewController, UITableViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupActivityIndicator()
         setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        viewModel.delegate = self
         viewModel.loadAdvices()
         tableView.reloadData()
     }
     
-    // MARK: - Data source
+    // MARK: - tableView data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -65,19 +67,45 @@ class FavoriteAdvicesViewController: UIViewController, UITableViewDataSource, UI
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             // handle delete
             viewModel.removeAdvice(index: indexPath.row)
+        }
+    }
+    
+    // MARK: - the model view callbacks
+    
+    func loadingStarted() {
+        activityIndicator.startAnimating()
+    }
+    
+    func loadingFinished() {
+        activityIndicator.stopAnimating()
+        tableView.reloadData()
+    }
+    
+    func error(error: Error) {
+        showAlertDialog(title: "", message: error.localizedDescription, positiveButtonText: "OK")
+    }
+    
+    func updateUI(after: ServiceOperation) {
+        switch after {
+        default:
             tableView.reloadData()
         }
     }
-
-    // MARK: - Rest ones
+    
+    // MARK: - rest ones
     
     func setupTableView() {
-        // register tableViewCells xib files
         tableView.register(UINib(nibName: AdviceTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: AdviceTableViewCell.cellReuseIdentifier)
         tableView.estimatedRowHeight = 64.0
-        // set tableView delegates
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    func setupActivityIndicator() {
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
     }
     
     func showAlertDialog (title: String, message: String, positiveButtonText: String) {
@@ -85,4 +113,5 @@ class FavoriteAdvicesViewController: UIViewController, UITableViewDataSource, UI
         alert.addAction(UIAlertAction(title: positiveButtonText, style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+
 }

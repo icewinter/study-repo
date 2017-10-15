@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RandomAdviceViewController: UIViewController, AdviceModelViewProtocol {
+class RandomAdviceViewController: UIViewController, RandomAdviceViewModelProtocol {
     
     @IBOutlet weak var label: UILabel!
     
@@ -38,16 +38,16 @@ class RandomAdviceViewController: UIViewController, AdviceModelViewProtocol {
     
     func loadingStarted() {
         activityIndicator.startAnimating()
-        UIApplication.shared.beginIgnoringInteractionEvents()
+        // UIApplication.shared.beginIgnoringInteractionEvents()
     }
     
     func loadingFinished() {
         activityIndicator.stopAnimating()
         label.text = viewModel.getRandomAdvice()?.text
-        UIApplication.shared.endIgnoringInteractionEvents()
+        // UIApplication.shared.endIgnoringInteractionEvents()
     }
     
-    func loadingError(error: Error) {
+    func error(error: Error) {
         showAlertDialog(title: "", message: error.localizedDescription, positiveButtonText: "OK")
     }
     
